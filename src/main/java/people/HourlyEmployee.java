@@ -6,12 +6,15 @@ public class HourlyEmployee extends Employee{
     }
 
     @Override
+    public void printEmployeePriceAfterDiscount(Clothing clothing) {
+        double amountOff =  calculateDiscount(clothing);
+        double priceAfterDiscount = clothing.getPrice() - amountOff;
+        System.out.println(priceAfterDiscount);
+    }
+
+
+    @Override
     public double calculateDiscount(Clothing clothes) {
-        double discountPercentage = getDiscount();
-
-        double discountAmount = clothes.getPrice() * (discountPercentage / 100);
-
-        return discountAmount;
-
+  return clothes.getPrice() * getDiscount();
     }
 }

@@ -11,9 +11,11 @@ public abstract class Employee extends Customer implements Discountable{
         return discount;
     }
 
-    public void printEmployeePriceAfterDiscount(Clothing clothing){
+    //using an array can be better to get the total price of the  array of clothing and calculate the
+    //discount also retunrning a double because our price are doubles
+    public abstract void printEmployeePriceAfterDiscount(Clothing clothing);
 
-    }
+
 
 
 

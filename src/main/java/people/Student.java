@@ -7,8 +7,15 @@ public class Student extends Customer implements Discountable{
         super(name);
     }
 
+
+
+public void printPriceAfterDiscount(Clothing clothing){
+    double amountOff =  calculateDiscount(clothing);
+    double priceAfterDiscount = clothing.getPrice() - amountOff;
+    System.out.println(priceAfterDiscount);
+}
     @Override
     public double calculateDiscount(Clothing clothes) {
-        return 0;
+        return clothes.getPrice() * discount;
     }
 }
